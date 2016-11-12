@@ -15,7 +15,7 @@ public class UserService {
     }
 
     public void createUser(User user) {
-        repository.createUser(user);
+        repository.save(user);
     }
 
     public User getUser(String name) {
@@ -24,10 +24,6 @@ public class UserService {
 
 
     public User getUser(Long id) {
-        return repository.findById(id);
-    }
-
-    public User getUser(String username, Long id) {
-        return repository.findById(id);
+        return repository.findOne(id);
     }
 }

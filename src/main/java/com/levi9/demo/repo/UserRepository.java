@@ -2,12 +2,9 @@ package com.levi9.demo.repo;
 
 
 import com.levi9.demo.domain.User;
-import org.springframework.data.repository.Repository;
+import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends Repository<User, Long> {
-    void createUser(User user);
-    void deleteUser(User user);
-    User findById(Long id);
+public interface UserRepository extends CrudRepository<User, Long> {
     User findByName(String name);
     User findByNameAndId(String name, Long id);
 

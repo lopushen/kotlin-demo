@@ -1,4 +1,4 @@
-package com.levi9.demo;
+package com.levi9.demo.service;
 
 import com.levi9.demo.domain.User;
 import com.levi9.demo.repo.UserRepository;

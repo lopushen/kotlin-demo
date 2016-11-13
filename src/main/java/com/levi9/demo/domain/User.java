@@ -1,11 +1,15 @@
 package com.levi9.demo.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import javax.persistence.*;
+import java.io.Serializable;
+
 @Entity
-public class User {
+public class User implements Serializable {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(nullable = false, name = "name")
     private String name;
 
     public Long getId() {

@@ -1,12 +1,9 @@
 package com.levi9.demo.rest;
 
-import com.levi9.demo.UserService;
+import com.levi9.demo.service.UserService;
 import com.levi9.demo.domain.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController("user")
 public class UserController {
@@ -18,7 +15,8 @@ public class UserController {
         this.userService = userService;
     }
 
-    public User getUser(@RequestParam("userName") String username, @RequestParam("id") Long id) {
+    @RequestMapping(method = RequestMethod.GET)
+    public User getUser(@RequestParam(value = "userName", required = false) String username, @RequestParam(value = "id", required = false) Long id) {
         if (id!=null && username!=null) {
             throw new IllegalArgumentException("Please specify only one parameter");
         }
@@ -32,7 +30,7 @@ public class UserController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public void createUser(User user) {
+    public void createUser(@RequestBody User user) {
         userService.createUser(user);
     }
 }

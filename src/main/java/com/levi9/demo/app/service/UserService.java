@@ -1,7 +1,7 @@
-package com.levi9.demo.service;
+package com.levi9.demo.app.service;
 
-import com.levi9.demo.domain.User;
-import com.levi9.demo.repo.UserRepository;
+import com.levi9.demo.app.domain.User;
+import com.levi9.demo.app.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

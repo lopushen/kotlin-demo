@@ -1,7 +1,10 @@
-package com.levi9.demo.domain;
+package com.levi9.demo.app.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
@@ -27,4 +30,6 @@ public class User implements Serializable {
     public void setName(String name) {
         this.name = name;
     }
+
+
 }

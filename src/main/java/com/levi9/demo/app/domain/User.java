@@ -15,6 +15,13 @@ public class User implements Serializable {
     @Column(nullable = false, name = "name")
     private String name;
 
+    public User(String name) {
+        this.name = name;
+    }
+
+    public User() {
+    }
+
     public Long getId() {
         return id;
     }

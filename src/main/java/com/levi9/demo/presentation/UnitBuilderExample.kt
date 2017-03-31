@@ -2,7 +2,7 @@ package com.levi9.demo.presentation
 
 
 fun main(args: Array<String>) {
-    Employee(name = "John", salary = 100).apply {
+    Employee( salary = 100, name = "John").apply {
         println(this)
 //        name should be a var in the data class
 //        this.name = "Not a John"

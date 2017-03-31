@@ -8,13 +8,16 @@ fun main(args: Array<String>) {
     list.swap(0,1)
     println(list)
 
-    // WTF here if use String template the property does not work
-    // println("the last index is $list.lastIndex")
-    // but this works - calling method
+//     WTF here if use String template the property does not work
+     println("the last index is ${list.lastIndex}")
+//    but this works - calling method
 //    println("the last element is ${list.last()}")
     println("the last index is " +list.lastIndex)
-
-
+//  Cannot do this
+//  val listStr = mutableListOf("1","2")
+//  listStr.swap(0,1)
+    // The extension functions are resolved statically
+    println(null.toString())
 }
 
 fun MutableList<Int>.swap(index1: Int, index2: Int) {

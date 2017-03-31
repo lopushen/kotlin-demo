@@ -10,6 +10,7 @@ fun checkIfString(str: Any) {
         println(str + " is String")
         str.substring(0, 5)
         val charArray = str.toCharArray()
+        // add dependency and show to POM and comment
         println(charArray.javaClass.kotlin)
     } else {
         println("You've passed not a String")

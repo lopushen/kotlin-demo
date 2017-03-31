@@ -6,6 +6,11 @@ fun main(args: Array<String>) {
     val users = UserPair(User(), User())
     users[2]
     users[1]
+//    users[3]
+
+    // equivalent
+    println(4 _x3 4)
+    println(4._x3(4))
 }
 
 data class UserPair(val user1: User, val user2: User) {
@@ -20,4 +25,8 @@ data class UserPair(val user1: User, val user2: User) {
         }
         throw IllegalArgumentException("The index is not correct")
     }
+}
+
+infix fun Int._x3(x:Int):Int {
+    return this*x*3
 }

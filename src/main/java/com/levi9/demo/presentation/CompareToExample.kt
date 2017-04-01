@@ -12,10 +12,10 @@ fun main(args: Array<String>) {
 
 data class Employee(var name: String, val salary: Int) {
 
-    operator fun compareTo(user2: Employee): Int {
-        if (user2.salary > salary) {
+    operator fun compareTo(record2: Employee): Int {
+        if (record2.salary > salary) {
             return -1
-        } else if (user2.salary < salary) {
+        } else if (record2.salary < salary) {
             return 1
         }
         return 0

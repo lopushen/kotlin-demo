@@ -10,7 +10,7 @@ fun main(args: Array<String>) {
 
     nullableStr = null
 
-//    str = try {nullableStr!!} catch (e:Exception){""}
+    str = try {nullableStr!!} catch (e:Exception){""}
 //    str = nullableStr!!
 //    str = nullableStr2!!
     str!!.length

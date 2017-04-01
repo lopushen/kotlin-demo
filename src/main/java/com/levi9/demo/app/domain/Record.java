@@ -8,18 +8,18 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+public class Record implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false, name = "name")
     private String name;
 
-    public User(String name) {
+    public Record(String name) {
         this.name = name;
     }
 
-    public User() {
+    public Record() {
     }
 
     public Long getId() {

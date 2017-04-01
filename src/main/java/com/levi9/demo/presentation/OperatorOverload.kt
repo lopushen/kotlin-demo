@@ -1,27 +1,27 @@
 package com.levi9.demo.presentation
 
-import com.levi9.demo.app.domain.User
+import com.levi9.demo.app.domain.Record
 
 fun main(args: Array<String>) {
-    val users = UserPair(User(), User())
-    users[2]
-    users[1]
-//    users[3]
+    val records = recordPair(Record(), Record())
+    records[2]
+    records[1]
+//    records[3]
 
     // equivalent
     println(4 _x3 4)
     println(4._x3(4))
 }
 
-data class UserPair(val user1: User, val user2: User) {
-    operator fun get(position: Int): User {
+data class recordPair(val record1: Record, val record2: Record) {
+    operator fun get(position: Int): Record {
         if (position === 1) {
-            println("Getting user 1")
-            return user1
+            println("Getting record 1")
+            return record1
         }
         if (position === 2) {
-            println("Getting user 2")
-            return user2
+            println("Getting record 2")
+            return record2
         }
         throw IllegalArgumentException("The index is not correct")
     }

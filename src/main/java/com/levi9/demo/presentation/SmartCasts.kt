@@ -1,12 +1,12 @@
 package com.levi9.demo.presentation
 
-import com.levi9.demo.app.domain.User
+import com.levi9.demo.app.domain.Record
 
 fun main(args: Array<String>) {
-    val user = getSmth("user")
-    if (user is User) println(user.name)
+    val record = getSmth("record")
+    if (record is Record) println(record.name)
 }
 
 private fun getSmth(what: String): Any {
-    return if (what=="user") User("John") else "smth"
+    return if (what=="record") Record("John") else "smth"
 }

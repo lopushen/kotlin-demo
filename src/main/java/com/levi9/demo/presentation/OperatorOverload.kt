@@ -34,5 +34,5 @@ infix fun Int._x3(x:Int):Int {
 }
 
 infix fun String.x_x(s:String) {
-    println("$this x_x $s x_x")
+     "$this x_x $s x_x"
 }

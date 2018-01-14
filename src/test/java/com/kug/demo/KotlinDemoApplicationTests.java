@@ -1,4 +1,4 @@
-package com.levi9.demo;
+package com.kug.demo;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

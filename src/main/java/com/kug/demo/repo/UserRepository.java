@@ -1,7 +1,7 @@
-package com.levi9.demo.repo;
+package com.kug.demo.repo;
 
 
-import com.levi9.demo.domain.User;
+import com.kug.demo.domain.User;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UserRepository extends CrudRepository<User, Long> {

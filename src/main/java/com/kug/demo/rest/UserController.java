@@ -5,8 +5,6 @@ import com.kug.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
-
 @RestController("user")
 public class UserController {
 
@@ -18,7 +16,7 @@ public class UserController {
     }
 
     @RequestMapping(path = "/{id}",method = RequestMethod.GET)
-    public User getUser(@PathParam(value = "id") Long id) {
+    public User getUser(@PathVariable(value = "id") Long id) {
                 return userService.getUser(id);
     }
 

@@ -1,6 +1,5 @@
 package com.kug.demo.domain;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import javax.persistence.*;
 import java.io.Serializable;
 

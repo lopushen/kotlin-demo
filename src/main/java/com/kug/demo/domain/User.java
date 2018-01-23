@@ -1,14 +1,13 @@
 package com.kug.demo.domain;
 
 import javax.persistence.*;
-import java.io.Serializable;
 
 @Entity
-public class User implements Serializable {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @Column(nullable = false, name = "name")
+    @Column(name = "name")
     private String name;
 
     public Long getId() {

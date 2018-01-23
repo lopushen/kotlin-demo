@@ -5,7 +5,10 @@ import com.kug.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-@RestController("user")
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController("/user")
 public class UserController {
 
     private UserService userService;
@@ -13,11 +16,6 @@ public class UserController {
     @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
-    }
-
-    @RequestMapping(path = "/{id}",method = RequestMethod.GET)
-    public User getUser(@PathVariable(value = "id") Long id) {
-                return userService.getUser(id);
     }
 
     @RequestMapping(method = RequestMethod.GET)
